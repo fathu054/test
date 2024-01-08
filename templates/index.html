@@ -1,0 +1,414 @@
+{% load static %}
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="TemplateMo">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <title>THIRUTH OFFICIAL</title>
+
+    <!-- Bootstrap core CSS -->
+    
+    <link rel="stylesheet" href= "{% static '/vendor/bootstrap/css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href= "{% static '/vendor/bootstrap/css/bootstrap.min.n.css'%}">
+    <!-- Additional CSS Files -->
+    <link rel="stylesheet" href= "{% static '/css/flex-slider.css'%}">
+    <link rel="stylesheet" href= "{% static '/css/fontawesome.css'%}">
+    <link rel="stylesheet" href= "{% static '/css/templatemo-edu-meeting.css'%}">
+    <link rel="stylesheet" href= "{% static '/css/owl.css'%}">
+    <link rel="stylesheet" href= "{% static '/css/lightbox.css'%}">
+    <link rel="stylesheet" href= "{% static '/css/mediumish.css'%}">
+
+
+<!--
+
+TemplateMo 569 Edu Meeting
+
+https://templatemo.com/tm-569-edu-meeting
+
+-->
+  </head>
+
+<body>
+
+   <!-- Sub Header -->
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8">
+          <div class="left-content">
+            <p>under <a href="">BUSTANUL UDABHAH STUDENT ASSOSSIATION</a> </p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+          <div class="right-icons">
+            <ul>
+              <li><a href="https://www.facebook.com/profile.php?id=100087571575183&sk=map"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-white fixed-top mediumnavigation">
+<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+</button>
+<div class="container">
+	<!-- Begin Logo -->
+	<a class="navbar-brand" href="index.html">
+		<h1 class="sitetitle">THIRUTH</h1>
+
+	<!-- <img src="assets/img/logo.png" alt="logo"> -->
+	</a>
+	<!-- End Logo -->
+	<div class="collapse navbar-collapse" id="navbarsExampleDefault">
+		<!-- Begin Menu -->
+		<ul class="navbar-nav ml-auto">
+			<li class="nav-item active">
+			<a class="nav-link" href="">Features <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="general">GENERAL</a>
+			</li>
+			<li class="nav-item">
+			<a class="nav-link" href="prophetic">PROPHETIC</a>
+			</li>
+      <li class="nav-item">
+        <a class="nav-link" href="spiritual">SPIRITUAL</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="social">SOCIAL</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about">ABOUT</a>
+            </li>
+		
+		<!-- End Menu -->
+		<!-- Begin Search -->
+		<form class="form-inline my-2 my-lg-0"  role="search" id="form">
+			<input class="form-control mr-sm-2" type="search" placeholder="Search" id="query" name="q">
+			<span class="search-icon"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25">
+        <path d="M20.067 18.933l-4.157-4.157a6 6 0 1 0-.884.884l4.157 4.157a.624.624 0 1 0 .884-.884zM6.5 11c0-2.62 2.13-4.75 4.75-4.75S16 8.38 16 11s-2.13 4.75-4.75 4.75S6.5 13.62 6.5 11z">
+
+        </path></svg></span>
+		</form></ul>
+		<!-- End Search -->
+	</div>
+</div>
+</nav>
+<!-- End Nav
+================================================== -->
+
+<!-- Begin Site Title
+================================================== -->
+<!-- <div class="container">
+	<div class="mainheading">
+		<h1 class="sitetitle">Mediumish</h1>
+		<p class="lead">
+			 Bootstrap theme, medium style, simply perfect for bloggers
+		</p>
+	</div> -->
+<!-- End Site Title
+================================================== -->
+
+	<!-- Begin Featured
+	================================================== -->
+	<section class="featured-posts">
+	<div class="section-title">
+		<h2 class="m-5"><span>Featured</span></h2>
+	</div>
+	<div class="card-columns listfeaturedtag">
+
+		<!-- begin post -->
+    {% for d in ft %}
+		<div class="card p-3" >
+			<div class="row">
+				<div class="col-md-5 wrapthumbnail">
+					<a href="featured#id{{d.ft_id}}">
+						<div class="thumbnail" style="background-image:url({{d.ft_featureImage.url}});height: 230px;">
+						</div>
+					</a>
+				</div>
+				<div class="col-md-7">
+					<div class="card-block">
+						<h2 class="card-title"><a href="featured#id{{d.ft_id}}">{{d.ft_heading}}</a></h2>
+						<h4 class="card-text" >{{d.ft_coating}}</h4>
+						<div class="metafooter">
+							<div class="wrapfooter">
+								<span class="meta-footer-thumb">
+								<a href="featured#id{{d.ft_id}}"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+								</span>
+								<span class="author-meta">
+								<span class="post-name"><a href="author.html">{{d.ft_authername}}</a></span><br/>
+								<span class="post-date">22 July 2017</span><span class="dot"></span>
+								</span>
+								<span class="post-read-more"><a href="post.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    {% endfor %}
+		<!-- end post -->
+
+	</div>
+	</section>
+	<!-- End Featured
+	================================================== -->
+
+	<!-- Begin List Posts
+	================================================== -->
+	<section class="recent-posts">
+	<div class="section-title">
+		<h2><span>All Stories</span></h2>
+	</div>
+	<div class="card-columns listrecent">
+{% for d in art %}
+		<!-- begin post -->
+    <a href="article2#id{{d.art_id}}">
+		<div class="card" style="height: 180px;" >
+			
+			<div class="card-block">
+				<h2 class="card-title"><a href="article#id{{d.art_id}}">{{d.art_heading}}</a></h2>
+				<div class="metafooter">
+					<div class="wrapfooter">
+						<span class="meta-footer-thumb">
+						<a href="article#id{{d.art_id}}"><img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x" alt="Sal"></a>
+						</span>
+						<span class="author-meta">
+						<span class="post-name"><a href="article#id{{d.art_id}}">{{d.art_name}}</a></span><br/>
+						<span class="post-date">22 July 2017</span><span class="dot"></span><span class="post-read">6 min read</span>
+						</span>
+						<span class="post-read-more"><a href="article#id{{d.art_id}}" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
+					</div>
+				</div>
+			</div>
+		</div></a>
+		<!-- end post -->
+{% endfor%}
+	</div>
+	</section>
+	<!-- End List Posts
+	================================================== -->
+
+
+  <section class="upcoming-meeting" id="meetings">
+    <section class="our-courses" id="courses">
+      <div class="container">
+        
+      </div>
+    </section>
+</section>
+  
+
+    <section class="upcoming-meeting" id="meetings">
+    <div class="container">
+      
+      <div class="row">
+       
+        <div class="col-lg-4 pt-5 ">
+          <div class="col-lg-12">
+            <div class="section-heading">
+              <h2></h2>
+            </div>
+          </div>
+          <div class="categories">
+            <h4>CATOGORIES</h4>
+            <ul>
+              <li><a href="general">GENERAL</a></li> <br>
+              <li><a href="prophetic">PROPHETIC</a></li> <br>
+              <li><a href="spiritual">SPIRITUAL</a></li> <br>
+              <li><a href="social">SOCIAL</a></li> <br>
+            </ul>
+            <div class="main-button-red">
+              <a href="article">All </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-8 pt-1">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="section-heading">
+                <h2>Published Magazines</h2>
+              </div>
+            </div>
+
+            {% for d in pb %} 
+            <div class="col-lg-4" id="pub">
+              <div class="meeting-item">
+                <div class="thumb">
+                  
+                  <a href="#pub"><img src="{{d.pb_img.url}}" alt="New Lecturer Meeting"></a>
+                </div>
+                
+              </div>
+            </div>
+            {% endfor %}
+
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+
+  
+
+  <section class="our-facts">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>A Few Facts About Us</h2>
+            </div>
+            {% for d in ct %}
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-12">
+                   <!-- ***** 
+                  <div class="count-area-content percentage">  ***** -->
+                    <div class="count-area-content">
+                    <div class="count-digit">{{d.ct_onl}}</div>
+                    <div class="count-title">Online Mgazine</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="count-area-content">
+                    <div class="count-digit">{{d.ct_trt}}</div>
+                    <div class="count-title">Thiruth Magazin</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row">
+
+                <div class="col-12">
+                  <div class="count-area-content new-students">
+                    <div class="count-digit">{{d.ct_art}}</div>
+                    <div class="count-title">Articles</div>
+                  </div>
+                </div> 
+                <div class="col-12">
+                  <div class="count-area-content">
+                    <div class="count-digit">{{d.ct_essay}}</div>
+                    <div class="count-title">Essays</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div> 
+        
+      </div>
+    </div>
+    <div class="footer">
+      <p style="color: blue;"> Copyright © </p>
+    </div>
+  </section>
+  {% comment %} search bar {% endcomment %}
+  <script>
+    const f = document.getElementById('form');
+    const q = document.getElementById('query');
+    const google = 'https://www.google.com/search?q=site%3A+';
+    const site = 'pagedart.com';
+
+    function submitted(event) {
+      event.preventDefault();
+      const url = google + site + '+' + q.value;
+      const win = window.open(url, '_blank');
+      win.focus();
+    }
+
+    f.addEventListener('submit', submitted);
+  </script>
+
+  
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+     <script src="{% static '/vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+     <script src="{% static '/vendor/jquery/jquery.min.js'%}"></script>
+
+     <!-- new js -->
+     <script src="{% static '/js/new/bootstrap.min.js'%}"></script>
+     <script src="{% static '/js/new/ie10-viewport-bug-workaround.js'%}"></script>
+     <script src="{% static '/js/new/jquery.min.js'%}"></script>
+     <script src="{% static '/js/new/mediumish.js'%}"></script>
+
+    <script src="{% static '/js/isotope.js'%}"></script>
+    <script src="{% static '/js/isotope.min.js'%}"></script>
+    <script src="{% static '/js/owl-carousel.js'%}"></script>
+    <script src="{% static '/js/lightbox.js'%}"></script>
+    <script src="{% static '/js/tabs.js'%}"></script>
+    <script src="{% static '/js/video.js'%}"></script>
+    <script src="{% static '/js/slick-slider.js'%}"></script>
+    <script src="{% static '/js/custom.js'%}"></script>
+    <script>
+        //according to loftblog tut
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+</body>
+
+</body>
+</html>
